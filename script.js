@@ -5,18 +5,19 @@ function gameOver(num1, num2)
 {
     if (num1==5)
     {
-        alert('Congrats! You Win!');
-        
+        confirm('Congrats! You Win! Play again?');
+        location.reload();
     }
     else if (num2==5)
-        alert('Game Over! You Lost!');
+        confirm('Game Over! You Lost! Play again?');
+        location.reload();
 }
 
 function computerTurn(num)
 {
     let randomNum = Math.floor(Math.random () * 3);
     console.log(randomNum);
-    
+
     if (num==randomNum)
     {
         document.getElementById('decision').innerHTML = "You Tied!";
