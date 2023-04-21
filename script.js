@@ -9,8 +9,14 @@ function gameOver(num1, num2)
         location.reload();
     }
     else if (num2==5)
+    {
         confirm('Game Over! You Lost! Play again?');
         location.reload();
+    }
+    else
+    {
+        return null;
+    }
 }
 
 function computerTurn(num)
