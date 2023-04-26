@@ -26,27 +26,38 @@ function computerTurn(num)
 
     if (num==randomNum)
     {
-        document.getElementById('decision').innerHTML = "You Tied!";
+        document.getElementById('decision').innerHTML = "You Tied! Both sides chose the same";
     }
     else if (num==2 && randomNum==1)
     {
-        document.getElementById('decision').innerHTML = "You Won!";
+        document.getElementById('decision').innerHTML = "Computer chose Paper. You Won!";
         pScore++;
+    }
+    else if (num==2 && randomNum==0)
+    {
+        document.getElementById('decision').innerHTML = "Computer chose Rock. You Lost!";
+        cScore++;
     }
     else if (num==1 && randomNum==0)
     {
-        document.getElementById('decision').innerHTML = "You Won!";
+        document.getElementById('decision').innerHTML = "Computer chose Rock. You Won!";
         pScore++;
+    }
+    else if (num==1 && randomNum==2)
+    {
+        document.getElementById('decision').innerHTML = "Computer chose Scissor. You Lost!";
+        cScore++;
     }
     else if (num==0 && randomNum==2)
     {
-        document.getElementById('decision').innerHTML = "You Won!";
+        document.getElementById('decision').innerHTML = "Computer chose Scissor. You Won!";
         pScore++;
     }
-    else{
-        document.getElementById('decision').innerHTML = "You Lost!";
+    else if (num==0 && randomNum==1)
+    {
+        document.getElementById('decision').innerHTML = "Computer chose Paper. You Lost!";
         cScore++;
-    } 
+    }
 
     document.getElementById('playerScore').innerHTML = pScore;
     document.getElementById('computerScore').innerHTML = cScore;
