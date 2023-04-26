@@ -58,6 +58,19 @@ footer{
     font-size: 30px;
 }
 
-@media only screen and (max-width:700px){
-    
+@media only screen and (max-width:600px){
+    body{
+        height: 100vh;
+    }
+    h1{
+        font-size:40px;
+        text-align: center;
+    }
+    img{
+        width:100px;
+        height: auto;
+    }
+    .buttons{
+        gap:20px;
+    }
 }
